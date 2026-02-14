@@ -1,6 +1,6 @@
 resource "aws_key_pair" "my_key" {
-  key_name = "terra-ansible-key"
-  public_key = file("terra-ansible-key.pem.pub")
+  key_name = "terra-ansible"
+  public_key = file("terra-ansible.pub")
 }
 
 resource "aws_default_vpc" "default" {
