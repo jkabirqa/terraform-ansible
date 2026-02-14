@@ -8,7 +8,7 @@ resource "aws_default_vpc" "default" {
 }
 
 resource "aws_security_group" "my_secgroup" {
-  name = "autmate-sg"
+  name = "autmate-sgg"
   description = "for tf-ansible"
   vpc_id = aws_default_vpc.default.id
 
@@ -37,7 +37,6 @@ resource "aws_security_group" "my_secgroup" {
 
 resource "aws_instance" "my_instance" {
   for_each = tomap({
-    demo1-master="ami-0b6c6ebed2801a5cb",
     demo1="ami-0b6c6ebed2801a5cb",
     demo2="ami-0ad50334604831820",
     demo3="ami-0c1fe732b5494dc14"
